@@ -335,7 +335,7 @@ public extension String {
     }
 }
 
-extension Character {
+public extension Character {
     func toInt() -> Int {
         var intFromCharacter: Int = 0
         for scalar in String(self).unicodeScalars {
@@ -345,7 +345,7 @@ extension Character {
     }
 }
 
-extension Date {
+public extension Date {
     func toString(_ format: String = "yyyy-MM-dd HH:mm:ss") -> String {
         return dateFormatter(format).string(from: self)
     }

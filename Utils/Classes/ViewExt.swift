@@ -8,7 +8,7 @@
 
 import Foundation
 #if os(iOS) || os(tvOS)
-    extension UIView {
+    public extension UIView {
         func trim(corner radius: Float = 0.0, border width: Float = 0.0, _ color: UIColor = UIColor.clear) {
             layer.masksToBounds = true
             if radius > 0 {
@@ -38,7 +38,7 @@ import Foundation
         }
     }
 
-    extension UIView {
+    public extension UIView {
         // MARK: - Basic Properties
 
         /// X Axis value of UIView.

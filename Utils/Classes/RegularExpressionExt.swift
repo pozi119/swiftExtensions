@@ -8,22 +8,22 @@
 
 import Foundation
 
-struct RxMatch {
-    var value = ""
+public struct RxMatch {
+    public var value = ""
     /* The substring that matched the expression. */
-    var range = NSRange()
+    public var range = NSRange()
     /* The range of the original string that was matched. */
-    var groups = [Any]()
+    public var groups = [Any]()
     /* Each object is an RxMatchGroup. */
-    var original = ""
+    public var original = ""
 }
 
-struct RxMatchGroup {
-    var value = ""
-    var range = NSRange()
+public struct RxMatchGroup {
+    public var value = ""
+    public var range = NSRange()
 }
 
-extension NSRegularExpression {
+public extension NSRegularExpression {
     func isMatch(_ matchee: String) -> Bool {
         return numberOfMatches(in: matchee, options: [], range: NSRange(location: 0, length: matchee.length)) > 0
     }
@@ -158,16 +158,16 @@ extension NSRegularExpression {
 }
 
 extension String {
-    func toRx() -> NSRegularExpression {
-        return try! NSRegularExpression(pattern: self)
+    func toRx() -> NSRegularExpression? {
+        return try? NSRegularExpression(pattern: self)
     }
 
-    func toRxIgnoreCase(_ ignoreCase: Bool) -> NSRegularExpression {
-        return try! NSRegularExpression(pattern: self, options: [.caseInsensitive])
+    func toRxIgnoreCase(_ ignoreCase: Bool) -> NSRegularExpression? {
+        return try? NSRegularExpression(pattern: self, options: [.caseInsensitive])
     }
 
-    func toRx(with options: NSRegularExpression.Options) -> NSRegularExpression {
-        return try! NSRegularExpression(pattern: self, options: options)
+    func toRx(with options: NSRegularExpression.Options) -> NSRegularExpression? {
+        return try? NSRegularExpression(pattern: self, options: options)
     }
 
     func isMatch(_ rx: NSRegularExpression) -> Bool {
@@ -211,8 +211,9 @@ extension String {
     }
 
     func isMatch(wildcard: String) -> Bool {
-        var rx = wildcard.replacingOccurrences(of: "?", with: ".{1}")
-        rx = rx.replacingOccurrences(of: "*", with: ".*")
-        return isMatch(rx.toRx())
+        var ex = wildcard.replacingOccurrences(of: "?", with: ".{1}")
+        ex = ex.replacingOccurrences(of: "*", with: ".*")
+        guard let rx = ex.toRx() else { return false }
+        return isMatch(rx)
     }
 }

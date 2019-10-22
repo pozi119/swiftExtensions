@@ -11,8 +11,8 @@ import Foundation
 /// Any类型的扩展
 /// 在DataExt中添加了Data与UIColor,Date,UIImage的互转
 public struct AnyExt {
-    var object: Any
-    init(_ object: Any) {
+    public var object: Any
+    public init(_ object: Any) {
         self.object = object
     }
 

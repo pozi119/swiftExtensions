@@ -55,6 +55,10 @@ public extension Color {
         self.init(red: rgba.r, green: rgba.g, blue: rgba.b, alpha: rgba.a)
     }
 
+    fileprivate convenience init(r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) {
+        self.init(red: r, green: g, blue: b, alpha: a)
+    }
+
     convenience init(hsba: (h: CGFloat, s: CGFloat, b: CGFloat, a: CGFloat)) {
         self.init(hue: hsba.h, saturation: hsba.s, brightness: hsba.b, alpha: hsba.a)
     }
@@ -336,49 +340,49 @@ public extension Color {
     // MARK: System Colors
 
     var infoBlue: Color {
-        return Color.colorWith(47, G: 112, B: 225, A: 1.0)
+        return Color(r: 47, g: 112, b: 225, a: 1.0)
     }
 
     var success: Color {
-        return Color.colorWith(83, G: 215, B: 106, A: 1.0)
+        return Color(r: 83, g: 215, b: 106, a: 1.0)
     }
 
     var warningColor: Color {
-        return Color.colorWith(221, G: 170, B: 59, A: 1.0)
+        return Color(r: 221, g: 170, b: 59, a: 1.0)
     }
 
     var danger: Color {
-        return Color.colorWith(229, G: 0, B: 15, A: 1.0)
+        return Color(r: 229, g: 0, b: 15, a: 1.0)
     }
 
     // MARK: Whites
 
     var antiqueWhite: Color {
-        return Color.colorWith(250, G: 235, B: 215, A: 1.0)
+        return Color(r: 250, g: 235, b: 215, a: 1.0)
     }
 
     var oldLace: Color {
-        return Color.colorWith(253, G: 245, B: 230, A: 1.0)
+        return Color(r: 253, g: 245, b: 230, a: 1.0)
     }
 
     var ivory: Color {
-        return Color.colorWith(255, G: 255, B: 240, A: 1.0)
+        return Color(r: 255, g: 255, b: 240, a: 1.0)
     }
 
     var seashell: Color {
-        return Color.colorWith(255, G: 245, B: 238, A: 1.0)
+        return Color(r: 255, g: 245, b: 238, a: 1.0)
     }
 
     var ghostWhite: Color {
-        return Color.colorWith(248, G: 248, B: 255, A: 1.0)
+        return Color(r: 248, g: 248, b: 255, a: 1.0)
     }
 
     var snow: Color {
-        return Color.colorWith(255, G: 250, B: 250, A: 1.0)
+        return Color(r: 255, g: 250, b: 250, a: 1.0)
     }
 
     var linen: Color {
-        return Color.colorWith(250, G: 240, B: 230, A: 1.0)
+        return Color(r: 250, g: 240, b: 230, a: 1.0)
     }
 
     // MARK: Grays
@@ -396,364 +400,360 @@ public extension Color {
     }
 
     var warmGray: Color {
-        return Color.colorWith(133, G: 117, B: 112, A: 1.0)
+        return Color(r: 133, g: 117, b: 112, a: 1.0)
     }
 
     var coolGray: Color {
-        return Color.colorWith(118, G: 122, B: 133, A: 1.0)
+        return Color(r: 118, g: 122, b: 133, a: 1.0)
     }
 
     var charcoal: Color {
-        return Color.colorWith(34, G: 34, B: 34, A: 1.0)
+        return Color(r: 34, g: 34, b: 34, a: 1.0)
     }
 
     // MARK: Blues
 
     var teal: Color {
-        return Color.colorWith(28, G: 160, B: 170, A: 1.0)
+        return Color(r: 28, g: 160, b: 170, a: 1.0)
     }
 
     var steelBlue: Color {
-        return Color.colorWith(103, G: 153, B: 170, A: 1.0)
+        return Color(r: 103, g: 153, b: 170, a: 1.0)
     }
 
     var robinEgg: Color {
-        return Color.colorWith(141, G: 218, B: 247, A: 1.0)
+        return Color(r: 141, g: 218, b: 247, a: 1.0)
     }
 
     var pastelBlue: Color {
-        return Color.colorWith(99, G: 161, B: 247, A: 1.0)
+        return Color(r: 99, g: 161, b: 247, a: 1.0)
     }
 
     var turquoise: Color {
-        return Color.colorWith(112, G: 219, B: 219, A: 1.0)
+        return Color(r: 112, g: 219, b: 219, a: 1.0)
     }
 
     var skyBlue: Color {
-        return Color.colorWith(0, G: 178, B: 238, A: 1.0)
+        return Color(r: 0, g: 178, b: 238, a: 1.0)
     }
 
     var indigo: Color {
-        return Color.colorWith(13, G: 79, B: 139, A: 1.0)
+        return Color(r: 13, g: 79, b: 139, a: 1.0)
     }
 
     var denim: Color {
-        return Color.colorWith(67, G: 114, B: 170, A: 1.0)
+        return Color(r: 67, g: 114, b: 170, a: 1.0)
     }
 
     var blueberry: Color {
-        return Color.colorWith(89, G: 113, B: 173, A: 1.0)
+        return Color(r: 89, g: 113, b: 173, a: 1.0)
     }
 
     var cornflower: Color {
-        return Color.colorWith(100, G: 149, B: 237, A: 1.0)
+        return Color(r: 100, g: 149, b: 237, a: 1.0)
     }
 
     var babyBlue: Color {
-        return Color.colorWith(190, G: 220, B: 230, A: 1.0)
+        return Color(r: 190, g: 220, b: 230, a: 1.0)
     }
 
     var midnightBlue: Color {
-        return Color.colorWith(13, G: 26, B: 35, A: 1.0)
+        return Color(r: 13, g: 26, b: 35, a: 1.0)
     }
 
     var fadedBlue: Color {
-        return Color.colorWith(23, G: 137, B: 155, A: 1.0)
+        return Color(r: 23, g: 137, b: 155, a: 1.0)
     }
 
     var iceberg: Color {
-        return Color.colorWith(200, G: 213, B: 219, A: 1.0)
+        return Color(r: 200, g: 213, b: 219, a: 1.0)
     }
 
     var wave: Color {
-        return Color.colorWith(102, G: 169, B: 251, A: 1.0)
+        return Color(r: 102, g: 169, b: 251, a: 1.0)
     }
 
     // MARK: Greens
 
     var emerald: Color {
-        return Color.colorWith(1, G: 152, B: 117, A: 1.0)
+        return Color(r: 1, g: 152, b: 117, a: 1.0)
     }
 
     var grass: Color {
-        return Color.colorWith(99, G: 214, B: 74, A: 1.0)
+        return Color(r: 99, g: 214, b: 74, a: 1.0)
     }
 
     var pastelGreen: Color {
-        return Color.colorWith(126, G: 242, B: 124, A: 1.0)
+        return Color(r: 126, g: 242, b: 124, a: 1.0)
     }
 
     var seafoam: Color {
-        return Color.colorWith(77, G: 226, B: 140, A: 1.0)
+        return Color(r: 77, g: 226, b: 140, a: 1.0)
     }
 
     var paleGreen: Color {
-        return Color.colorWith(176, G: 226, B: 172, A: 1.0)
+        return Color(r: 176, g: 226, b: 172, a: 1.0)
     }
 
     var cactusGreen: Color {
-        return Color.colorWith(99, G: 111, B: 87, A: 1.0)
+        return Color(r: 99, g: 111, b: 87, a: 1.0)
     }
 
     var chartreuse: Color {
-        return Color.colorWith(69, G: 139, B: 0, A: 1.0)
+        return Color(r: 69, g: 139, b: 0, a: 1.0)
     }
 
     var hollyGreen: Color {
-        return Color.colorWith(32, G: 87, B: 14, A: 1.0)
+        return Color(r: 32, g: 87, b: 14, a: 1.0)
     }
 
     var olive: Color {
-        return Color.colorWith(91, G: 114, B: 34, A: 1.0)
+        return Color(r: 91, g: 114, b: 34, a: 1.0)
     }
 
     var oliveDrab: Color {
-        return Color.colorWith(107, G: 142, B: 35, A: 1.0)
+        return Color(r: 107, g: 142, b: 35, a: 1.0)
     }
 
     var moneyGreen: Color {
-        return Color.colorWith(134, G: 198, B: 124, A: 1.0)
+        return Color(r: 134, g: 198, b: 124, a: 1.0)
     }
 
     var honeydew: Color {
-        return Color.colorWith(216, G: 255, B: 231, A: 1.0)
+        return Color(r: 216, g: 255, b: 231, a: 1.0)
     }
 
     var lime: Color {
-        return Color.colorWith(56, G: 237, B: 56, A: 1.0)
+        return Color(r: 56, g: 237, b: 56, a: 1.0)
     }
 
     var cardTable: Color {
-        return Color.colorWith(87, G: 121, B: 107, A: 1.0)
+        return Color(r: 87, g: 121, b: 107, a: 1.0)
     }
 
     // MARK: Reds
 
     var salmon: Color {
-        return Color.colorWith(233, G: 87, B: 95, A: 1.0)
+        return Color(r: 233, g: 87, b: 95, a: 1.0)
     }
 
     var brickRed: Color {
-        return Color.colorWith(151, G: 27, B: 16, A: 1.0)
+        return Color(r: 151, g: 27, b: 16, a: 1.0)
     }
 
     var easterPink: Color {
-        return Color.colorWith(241, G: 167, B: 162, A: 1.0)
+        return Color(r: 241, g: 167, b: 162, a: 1.0)
     }
 
     var grapefruit: Color {
-        return Color.colorWith(228, G: 31, B: 54, A: 1.0)
+        return Color(r: 228, g: 31, b: 54, a: 1.0)
     }
 
     var pink: Color {
-        return Color.colorWith(255, G: 95, B: 154, A: 1.0)
+        return Color(r: 255, g: 95, b: 154, a: 1.0)
     }
 
     var indianRed: Color {
-        return Color.colorWith(205, G: 92, B: 92, A: 1.0)
+        return Color(r: 205, g: 92, b: 92, a: 1.0)
     }
 
     var strawberry: Color {
-        return Color.colorWith(190, G: 38, B: 37, A: 1.0)
+        return Color(r: 190, g: 38, b: 37, a: 1.0)
     }
 
     var coral: Color {
-        return Color.colorWith(240, G: 128, B: 128, A: 1.0)
+        return Color(r: 240, g: 128, b: 128, a: 1.0)
     }
 
     var maroon: Color {
-        return Color.colorWith(80, G: 4, B: 28, A: 1.0)
+        return Color(r: 80, g: 4, b: 28, a: 1.0)
     }
 
     var watermelon: Color {
-        return Color.colorWith(242, G: 71, B: 63, A: 1.0)
+        return Color(r: 242, g: 71, b: 63, a: 1.0)
     }
 
     var tomato: Color {
-        return Color.colorWith(255, G: 99, B: 71, A: 1.0)
+        return Color(r: 255, g: 99, b: 71, a: 1.0)
     }
 
     var pinkLipstick: Color {
-        return Color.colorWith(255, G: 105, B: 180, A: 1.0)
+        return Color(r: 255, g: 105, b: 180, a: 1.0)
     }
 
     var paleRose: Color {
-        return Color.colorWith(255, G: 228, B: 225, A: 1.0)
+        return Color(r: 255, g: 228, b: 225, a: 1.0)
     }
 
     var crimson: Color {
-        return Color.colorWith(187, G: 18, B: 36, A: 1.0)
+        return Color(r: 187, g: 18, b: 36, a: 1.0)
     }
 
     // MARK: Purples
 
     var eggplant: Color {
-        return Color.colorWith(105, G: 5, B: 98, A: 1.0)
+        return Color(r: 105, g: 5, b: 98, a: 1.0)
     }
 
     var pastelPurple: Color {
-        return Color.colorWith(207, G: 100, B: 235, A: 1.0)
+        return Color(r: 207, g: 100, b: 235, a: 1.0)
     }
 
     var palePurple: Color {
-        return Color.colorWith(229, G: 180, B: 235, A: 1.0)
+        return Color(r: 229, g: 180, b: 235, a: 1.0)
     }
 
     var coolPurple: Color {
-        return Color.colorWith(140, G: 93, B: 228, A: 1.0)
+        return Color(r: 140, g: 93, b: 228, a: 1.0)
     }
 
     var violet: Color {
-        return Color.colorWith(191, G: 95, B: 255, A: 1.0)
+        return Color(r: 191, g: 95, b: 255, a: 1.0)
     }
 
     var plum: Color {
-        return Color.colorWith(139, G: 102, B: 139, A: 1.0)
+        return Color(r: 139, g: 102, b: 139, a: 1.0)
     }
 
     var lavender: Color {
-        return Color.colorWith(204, G: 153, B: 204, A: 1.0)
+        return Color(r: 204, g: 153, b: 204, a: 1.0)
     }
 
     var raspberry: Color {
-        return Color.colorWith(135, G: 38, B: 87, A: 1.0)
+        return Color(r: 135, g: 38, b: 87, a: 1.0)
     }
 
     var fuschia: Color {
-        return Color.colorWith(255, G: 20, B: 147, A: 1.0)
+        return Color(r: 255, g: 20, b: 147, a: 1.0)
     }
 
     var grape: Color {
-        return Color.colorWith(54, G: 11, B: 88, A: 1.0)
+        return Color(r: 54, g: 11, b: 88, a: 1.0)
     }
 
     var periwinkle: Color {
-        return Color.colorWith(135, G: 159, B: 237, A: 1.0)
+        return Color(r: 135, g: 159, b: 237, a: 1.0)
     }
 
     var orchid: Color {
-        return Color.colorWith(218, G: 112, B: 214, A: 1.0)
+        return Color(r: 218, g: 112, b: 214, a: 1.0)
     }
 
     // MARK: Yellows
 
     var goldenrod: Color {
-        return Color.colorWith(215, G: 170, B: 51, A: 1.0)
+        return Color(r: 215, g: 170, b: 51, a: 1.0)
     }
 
     var yellowGreen: Color {
-        return Color.colorWith(192, G: 242, B: 39, A: 1.0)
+        return Color(r: 192, g: 242, b: 39, a: 1.0)
     }
 
     var banana: Color {
-        return Color.colorWith(229, G: 227, B: 58, A: 1.0)
+        return Color(r: 229, g: 227, b: 58, a: 1.0)
     }
 
     var mustard: Color {
-        return Color.colorWith(205, G: 171, B: 45, A: 1.0)
+        return Color(r: 205, g: 171, b: 45, a: 1.0)
     }
 
     var buttermilk: Color {
-        return Color.colorWith(254, G: 241, B: 181, A: 1.0)
+        return Color(r: 254, g: 241, b: 181, a: 1.0)
     }
 
     var gold: Color {
-        return Color.colorWith(139, G: 117, B: 18, A: 1.0)
+        return Color(r: 139, g: 117, b: 18, a: 1.0)
     }
 
     var cream: Color {
-        return Color.colorWith(240, G: 226, B: 187, A: 1.0)
+        return Color(r: 240, g: 226, b: 187, a: 1.0)
     }
 
     var lightCream: Color {
-        return Color.colorWith(240, G: 238, B: 215, A: 1.0)
+        return Color(r: 240, g: 238, b: 215, a: 1.0)
     }
 
     var wheat: Color {
-        return Color.colorWith(240, G: 238, B: 215, A: 1.0)
+        return Color(r: 240, g: 238, b: 215, a: 1.0)
     }
 
     var beige: Color {
-        return Color.colorWith(245, G: 245, B: 220, A: 1.0)
+        return Color(r: 245, g: 245, b: 220, a: 1.0)
     }
 
     // MARK: Oranges
 
     var peach: Color {
-        return Color.colorWith(242, G: 187, B: 97, A: 1.0)
+        return Color(r: 242, g: 187, b: 97, a: 1.0)
     }
 
     var burntOrange: Color {
-        return Color.colorWith(184, G: 102, B: 37, A: 1.0)
+        return Color(r: 184, g: 102, b: 37, a: 1.0)
     }
 
     var pastelOrange: Color {
-        return Color.colorWith(248, G: 197, B: 143, A: 1.0)
+        return Color(r: 248, g: 197, b: 143, a: 1.0)
     }
 
     var cantaloupe: Color {
-        return Color.colorWith(250, G: 154, B: 79, A: 1.0)
+        return Color(r: 250, g: 154, b: 79, a: 1.0)
     }
 
     var carrot: Color {
-        return Color.colorWith(237, G: 145, B: 33, A: 1.0)
+        return Color(r: 237, g: 145, b: 33, a: 1.0)
     }
 
     var mandarin: Color {
-        return Color.colorWith(247, G: 145, B: 55, A: 1.0)
+        return Color(r: 247, g: 145, b: 55, a: 1.0)
     }
 
     // MARK: Browns
 
     var chiliPowder: Color {
-        return Color.colorWith(199, G: 63, B: 23, A: 1.0)
+        return Color(r: 199, g: 63, b: 23, a: 1.0)
     }
 
     var burntSienna: Color {
-        return Color.colorWith(138, G: 54, B: 15, A: 1.0)
+        return Color(r: 138, g: 54, b: 15, a: 1.0)
     }
 
     var chocolate: Color {
-        return Color.colorWith(94, G: 38, B: 5, A: 1.0)
+        return Color(r: 94, g: 38, b: 5, a: 1.0)
     }
 
     var coffee: Color {
-        return Color.colorWith(141, G: 60, B: 15, A: 1.0)
+        return Color(r: 141, g: 60, b: 15, a: 1.0)
     }
 
     var cinnamon: Color {
-        return Color.colorWith(123, G: 63, B: 9, A: 1.0)
+        return Color(r: 123, g: 63, b: 9, a: 1.0)
     }
 
     var almond: Color {
-        return Color.colorWith(196, G: 142, B: 72, A: 1.0)
+        return Color(r: 196, g: 142, b: 72, a: 1.0)
     }
 
     var eggshell: Color {
-        return Color.colorWith(252, G: 230, B: 201, A: 1.0)
+        return Color(r: 252, g: 230, b: 201, a: 1.0)
     }
 
     var sand: Color {
-        return Color.colorWith(222, G: 182, B: 151, A: 1.0)
+        return Color(r: 222, g: 182, b: 151, a: 1.0)
     }
 
     var mud: Color {
-        return Color.colorWith(70, G: 45, B: 29, A: 1.0)
+        return Color(r: 70, g: 45, b: 29, a: 1.0)
     }
 
     var sienna: Color {
-        return Color.colorWith(160, G: 82, B: 45, A: 1.0)
+        return Color(r: 160, g: 82, b: 45, a: 1.0)
     }
 
     var dust: Color {
-        return Color.colorWith(236, G: 214, B: 197, A: 1.0)
+        return Color(r: 236, g: 214, b: 197, a: 1.0)
     }
 
     // MARK: - Private Helpers
-
-    fileprivate class func colorWith(_ R: CGFloat, G: CGFloat, B: CGFloat, A: CGFloat) -> Color {
-        return Color(rgba: (R / 255.0, G / 255.0, B / 255.0, A))
-    }
 
     fileprivate class func addDegree(_ addDegree: CGFloat, staticDegree: CGFloat) -> CGFloat {
         let s = staticDegree + addDegree
